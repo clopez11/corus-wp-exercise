@@ -4,10 +4,11 @@
 */
 
 // Add CSS Stylesheets in head tag
+add_action( 'wp_enqueue_scripts', 'style_sheets' );
 function style_sheets() {    
     wp_register_style (
     	'Slick', 
-    	get_template_directory_uri() . '/components/slick-slider/slick-theme.css', 
+    	get_template_directory_uri() . '/components/slick-slider/slick.css', 
     	'all'
     );
     wp_register_style (
@@ -31,10 +32,10 @@ function style_sheets() {
     wp_enqueue_style( 'Google Fonts');
     wp_enqueue_style( 'Corus WordPress Exercise');
 }
-add_action( 'wp_enqueue_scripts', 'style_sheets' );
 // Add CSS Stylesheets in head tag end
 
 // Add jQuery, Font Awesome & Slick scripts
+add_action( 'wp_enqueue_scripts', 'add_my_script' );
 function add_my_script() {
     wp_enqueue_script(
         'jquery-1.11.0.min.js',
@@ -62,10 +63,10 @@ function add_my_script() {
         array('jquery')
     );
 }
-add_action( 'wp_enqueue_scripts', 'add_my_script' );
 // Add jQuery, Font Awesome & Slick scripts end
 
 // Custom Post Type - Gallery
+add_action( 'init', 'create_posttype' );
 function create_posttype() {
 	register_post_type( 'gallery',
 	array(
@@ -79,8 +80,8 @@ function create_posttype() {
 	 )
 	);
 }
-add_action( 'init', 'create_posttype' );
 
+add_action('init', 'cw_post_type_gallery');
 function cw_post_type_gallery() {
 	$supports = array(
 		'title', // post title
@@ -107,9 +108,14 @@ function cw_post_type_gallery() {
 		'search_items' => __('Search gallery'),
 		'not_found' => __('No gallery found.'),
 	);
+    $taxonomies = array(
+        'category', 
+        'post_tag'
+    );
 	$args = array(
 		'supports' => $supports,
 		'labels' => $labels,
+        'taxonomies' => $taxonomies,
 		'public' => true,
 		'query_var' => true,
 		'rewrite' => array('slug' => 'gallery'),
@@ -118,5 +124,10 @@ function cw_post_type_gallery() {
 	);
 	register_post_type('gallery', $args);
 }
-add_action('init', 'cw_post_type_gallery');
+
+add_action('init', 'demo_add_default_boxes');
+function demo_add_default_boxes() {
+    register_taxonomy_for_object_type('category', 'gallery');
+    register_taxonomy_for_object_type('post_tag', 'gallery');
+}
 // Custom Post Type end

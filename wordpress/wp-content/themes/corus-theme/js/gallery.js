@@ -2,8 +2,11 @@
 
 $(document).ready(function(){
 	$('.main-gallery').slick({
-		slidesToShow: 3,
-		dots: true,
-		centerMode: true,		
+		slidesToShow: 1,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear',
+		dots: true
 	});
 });
