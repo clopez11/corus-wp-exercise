@@ -12,23 +12,23 @@
 </head>
 <body>
 	<!-- website background wrapper -->
-	<div class="main-website-wrapper">
+	<div class="main-website-wrapper">				
 		<!-- start of nav -->
 		<nav id="main-nav-wrapper">
-			<div class="main-nav-links">
+			<!-- start of links -->
+			<div class="main-nav-container">
+				<!-- start of logo -->
+				<div class="main-header-container">
+					<h1 class="main-header-title">Corus WP Exercise</h1>
+				</div>
+				<!-- end of logo -->				
 				<ul class="main-nav-links-list">
-					<li class="main-nav-link-item"><a class="main-nav-links" href="<?php echo site_url('/home/') ?>">Home</a></li>
-					<li class="main-nav-link-item"><a class="main-nav-links" href="<?php echo site_url('/gallery/') ?>">Gallery</a></li>
-					<li class="main-nav-link-item"><a class="nav-main-links" href="<?php echo site_url('/contact/') ?>">Contact</a></li>		
+					<li class="main-nav-link-item"><a class="main-nav-links" href="#">Home</a></li>
+					<li class="main-nav-link-item"><a class="main-nav-links" href="#">Gallery</a></li>
+					<li class="main-nav-link-item"><a class="main-nav-links" href="#">Contact</a></li>		
 				</ul>
 			</div>
+			<!-- end of links -->
 		</nav>
 		<!-- end of nav -->
-
-		<!-- start of header -->
-		<header id="main-header-wrapper">
-			<div class="header-images" id="main-header-images">
-				<!-- <img src="<?php bloginfo('stylesheet_directory')?>/assets/images/header-backgrounds/img-surfing-abigail-lynn.jpg" alt="colourful surfing boards" width="50%"/> -->
-			</div>				
-		</header>		
 		<!-- start of main in home.php -->

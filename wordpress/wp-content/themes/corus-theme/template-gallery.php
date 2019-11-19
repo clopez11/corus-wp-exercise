@@ -9,7 +9,9 @@ query_posts(array(
 <?php
 			while (have_posts()) : the_post(); ?>
 				<div class="main-gallery-wrapper">
-					<h2 class="main-gallery-title"><?php the_field('title'); ?></h2>
+					<div class="main-gallery-container">
+						<h2 class="main-gallery-title"><?php the_field('title'); ?></h2>	
+					</div>
 					<div class="main-gallery">
 					  <div class="img-gallery1">
 					  	<img src="<?php the_field('image1'); ?>" />
@@ -20,8 +22,6 @@ query_posts(array(
 					  <div class="img-gallery3">
 					  	<img src="<?php the_field('image3'); ?>" />
 					  </div>
-					</div>						
+					</div>											
 				</div>
-			<?php endwhile;
-
-get_footer();
+			<?php endwhile; ?>
