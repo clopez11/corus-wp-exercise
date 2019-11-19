@@ -7,11 +7,13 @@ query_posts(array(
    'post_type' => 'gallery'
 )); ?>
 <?php
-			while (have_posts()) : the_post(); ?>
+			while (have_posts()) : the_post(); ?>				
 				<div class="main-gallery-wrapper">
-					<div class="main-gallery-container">
+					<!-- start of main gallery title -->
+					<div class="main-gallery-title-container">
 						<h2 class="main-gallery-title"><?php the_field('title'); ?></h2>	
 					</div>
+					<!-- start of main gallery images -->
 					<div class="main-gallery">
 					  <div class="img-gallery1">
 					  	<img src="<?php the_field('image1'); ?>" />

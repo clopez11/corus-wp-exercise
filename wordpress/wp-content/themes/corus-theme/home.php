@@ -9,9 +9,9 @@
 			<!-- posts images in gallery home page -->
 			<?php include 'custom-templates/template-gallery.php';?>
 		</main>
-		<!-- end of main content -->
-		<?php get_footer(); ?>
+		<!-- end of main content -->		
 	</div>
 	<!-- end of website background wrapper -->
+	<?php get_footer(); ?>	
 </body>
 </html>

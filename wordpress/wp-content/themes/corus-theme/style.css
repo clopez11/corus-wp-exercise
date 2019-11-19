@@ -3,13 +3,6 @@
  Version:      1.0.2
 */
 /* --------------- Theme customization starts here ----------------- */
-
-/* -------------------------------------*/
-/*font-family: 'PT Sans', sans-serif;*/
-/*font-family: 'Roboto', sans-serif;*/
-/*font-family: 'Lato', sans-serif;*/
-/* -------------------------------------
-
 /* -------------------------------------*/
 /* ----- START OF DEFAULT STYLES ------ */
 /* -------------------------------------*/
@@ -48,15 +41,13 @@ ul.main-nav-links-list {
     margin-right: 4em;
     flex: 2;
 }
-li.main-nav-link-item {
-    padding: 1em 2em;
-}
+li.main-nav-link-item {padding: 1em 2em;}
 a.main-nav-links {
     text-decoration: none;
     color: #eee;
     font-size: 1.6em;
 }
-div.main-gallery-container {
+div.main-gallery-title-container {
     background: rgba(255, 255, 255, 0.4);
     padding: 1em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -92,3 +83,5 @@ footer#main-footer-wrapper {
     text-align: center;
 }
 p.footer-copyright {font-size: 1.2em}
+
+/* --------------- Media Queries starts here ----------------- */
