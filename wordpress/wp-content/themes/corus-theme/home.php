@@ -7,7 +7,7 @@
 		<!-- start of main section -->
 		<main id="main-content-wrapper">
 			<!-- posts images in gallery home page -->
-			<?php include 'template-gallery.php';?>
+			<?php include 'custom-templates/template-gallery.php';?>
 		</main>
 		<!-- end of main content -->
 		<?php get_footer(); ?>
